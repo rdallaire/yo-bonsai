@@ -47,7 +47,7 @@ $ yo bonsai
 
 ## Changelog
 
-0.0.1 Initial release / fork
+0.0.2 Initial release / fork
 
 
 ## License

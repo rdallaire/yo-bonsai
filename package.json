@@ -1,6 +1,6 @@
 {
   "name": "generator-bonsai",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Use Yeoman to generate a clean, Sass and Gulp-ready WordPress starter theme",
   "license": "MIT",
   "homepage": "https://github.com/rdallaire/yo-bonsai",

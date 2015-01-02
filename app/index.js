@@ -49,13 +49,13 @@ var BonsaiGenerator = yeoman.generators.Base.extend({
         name: 'themeAuthor',
         message: 'Who is the theme author?',
         default: function( answers ) {
-  	      return 'Zoe Rooney Web Development';
+  	      return 'Ross Dallaire';
   	    }
       },{
         name: 'themeAuthorURI',
         message: 'What\'s their website URL (the author)?',
         default: function( answers ) {
-  	      return 'http://www.zoerooney.com';
+  	      return 'http://rdallaire.com';
   	  }
       },{
         name: 'themeURI',
