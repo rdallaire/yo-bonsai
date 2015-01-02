@@ -6,7 +6,7 @@ var util	= require('util'),
 	chalk	= require('chalk'),
 	art		= require('../util/art');
 
-var EmiGenerator = yeoman.generators.Base.extend({
+var BonsaiGenerator = yeoman.generators.Base.extend({
   init: function () {
     this.pkg = require('../package.json');
 
@@ -18,8 +18,8 @@ var EmiGenerator = yeoman.generators.Base.extend({
          npm: true,
          skipInstall: false,
          callback: function () {
-           	this.spawnCommand('gulp', ['styles']);
-           	console.log(chalk.yellow('\n\nLast but not least, we\'ll set up style.css.\n\n'));
+           	// this.spawnCommand('gulp', ['styles']);
+           	// console.log(chalk.yellow('\n\nLast but not least, we\'ll set up style.css.\n\n'));
          }.bind(this)
        });
       }
@@ -30,7 +30,7 @@ var EmiGenerator = yeoman.generators.Base.extend({
 	self 	= this
 
 	this.log.writeln(chalk.yellow(art.emi));
-	this.log.writeln(chalk.yellow('\n\nLet\'s grab the latest version of Emi...\n\n'));
+	this.log.writeln(chalk.yellow('\n\nLet\'s grab the latest version of Bonsai...\n\n'));
 	this.tarball('https://github.com/rdallaire/bonsai/archive/master.tar.gz', '.', cb);
 	this.log.writeln(chalk.yellow('\n\nGot it!\n\n'));
   },
@@ -40,7 +40,7 @@ var EmiGenerator = yeoman.generators.Base.extend({
 
     // Welcome art & description
 
-    console.log(chalk.yellow('You\'re about to generate a new starter theme based on Emi. Just a few questions to get started...'));
+    console.log(chalk.yellow('You\'re about to generate a new starter theme based on Bonsai. Just a few questions to get started...'));
 
     var prompts = [{
         name: 'themeName',
@@ -87,7 +87,7 @@ var EmiGenerator = yeoman.generators.Base.extend({
       this.themeHandle		= props.themeName.trim().replace(/ /g,'_');
       this.themeFunction	= props.themeName.toLowerCase().trim().replace(/ /g,'_');
       this.themeTextDomain	= props.themeName.toLowerCase().trim().replace(/ /g,'-');
-	  this.themeAuthor		= props.themeAuthor;
+      this.themeAuthor		= props.themeAuthor;
       this.themeAuthorURI	= props.themeAuthorURI;
       this.themeURI			= props.themeURI;
       this.themeDescription = props.themeDescription;
@@ -139,4 +139,4 @@ var EmiGenerator = yeoman.generators.Base.extend({
   }
 
 });
-module.exports = EmiGenerator;
+module.exports = BonsaiGenerator;

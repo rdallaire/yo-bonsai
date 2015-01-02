@@ -1,19 +1,18 @@
 {
   "name": "generator-bonsai",
-  "version": "2.0.4",
+  "version": "0.0.1",
   "description": "Use Yeoman to generate a clean, Sass and Gulp-ready WordPress starter theme",
   "license": "MIT",
-  "homepage": "https://github.com/zoerooney/yo-emi",
-  "bugs": "https://github.com/zoerooney/yo-emi/issues",
+  "homepage": "https://github.com/rdallaire/yo-bonsai",
+  "bugs": "https://github.com/rdallaire/yo-bonsai/issues",
   "main": "app/index.js",
   "repository": {
   	"type": "git",
-  	"url": "git://github.com/zoerooney/yo-emi.git"
+  	"url": "git://github.com/rdallaire/yo-bonsai.git"
   },
   "author": {
-    "name": "Zoe Rooney",
-    "email": "hello@zoerooney.com",
-    "url": "http://github.com/zoerooney"
+    "name": "Ross Dallaire",
+    "url": "http://github.com/rdallaire"
   },
   "engines": {
     "node": ">=0.10.0",
@@ -34,7 +33,7 @@
     "front-end",
     "gulp",
     "starter theme",
-    "emi"
+    "bonsai"
   ],
   "dependencies": {
     "yeoman-generator": ">=0.16.0",
