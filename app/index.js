@@ -28,18 +28,18 @@ var EmiGenerator = yeoman.generators.Base.extend({
   grab: function() {
 	var	cb	= this.async(),
 	self 	= this
-	
+
 	this.log.writeln(chalk.yellow(art.emi));
 	this.log.writeln(chalk.yellow('\n\nLet\'s grab the latest version of Emi...\n\n'));
-	this.tarball('https://github.com/zoerooney/Emi/archive/master.tar.gz', '.', cb);
+	this.tarball('https://github.com/rdallaire/bonsai/archive/master.tar.gz', '.', cb);
 	this.log.writeln(chalk.yellow('\n\nGot it!\n\n'));
   },
   askFor: function () {
-    
+
     var done = this.async();
-	
+
     // Welcome art & description
-    
+
     console.log(chalk.yellow('You\'re about to generate a new starter theme based on Emi. Just a few questions to get started...'));
 
     var prompts = [{
@@ -80,9 +80,9 @@ var EmiGenerator = yeoman.generators.Base.extend({
         }
       }
     ];
-   	
+
     this.prompt(prompts, function (props) {
-      
+
       this.themeName		= props.themeName;
       this.themeHandle		= props.themeName.trim().replace(/ /g,'_');
       this.themeFunction	= props.themeName.toLowerCase().trim().replace(/ /g,'_');
@@ -93,23 +93,23 @@ var EmiGenerator = yeoman.generators.Base.extend({
       this.themeDescription = props.themeDescription;
       this.themeDesigner	= props.themeDesigner;
       this.themeDesignerURI = props.themeDesignerURI;
-      
+
       done();
     }.bind(this));
   },
-  
+
   projectfiles: function () {
 	var complete	= this.async(),
 		self		= this
-    
+
 	// parse recursively a directory
 	function parseDirectory( path ) {
-	
-		fs.readdir( path, function(err, files) {		  
+
+		fs.readdir( path, function(err, files) {
 		  files.forEach( function(file) {
-		    var filePath = fs.realpathSync( path + '/' + file), 
+		    var filePath = fs.realpathSync( path + '/' + file),
 		    	isDirectory = fs.statSync( filePath ).isDirectory()
-		    
+
 			if (isDirectory) {
 				parseDirectory( filePath )
 			} else {
@@ -124,7 +124,7 @@ var EmiGenerator = yeoman.generators.Base.extend({
 					data = data.replace(/themeDescription/g, self.themeDescription)
 					data = data.replace(/themeDesigner/g, self.themeDesigner)
 					data = data.replace(/themeDesignerURI/g, self.themeDesignerURI)
-				  
+
 				  	fs.writeFile(filePath, data, 'utf8',  function (err) {
 				     if (err) return console.log(err);
 
@@ -134,9 +134,9 @@ var EmiGenerator = yeoman.generators.Base.extend({
 		  })
 		})
 	}
-	parseDirectory('.')	
+	parseDirectory('.')
 	complete()
   }
-  
+
 });
 module.exports = EmiGenerator;

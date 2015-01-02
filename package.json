@@ -1,5 +1,5 @@
 {
-  "name": "generator-emi",
+  "name": "generator-bonsai",
   "version": "2.0.4",
   "description": "Use Yeoman to generate a clean, Sass and Gulp-ready WordPress starter theme",
   "license": "MIT",
@@ -9,7 +9,7 @@
   "repository": {
   	"type": "git",
   	"url": "git://github.com/zoerooney/yo-emi.git"
-  }, 
+  },
   "author": {
     "name": "Zoe Rooney",
     "email": "hello@zoerooney.com",
