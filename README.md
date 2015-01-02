@@ -33,7 +33,7 @@ $ sudo npm install -g gulp
 ### Install Bonsai
 
 
-You can install the Emi generator using the command:
+You can install the Bonsai generator using the command:
 
 ```
 $ npm install -g generator-bonsai
