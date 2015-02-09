@@ -2,6 +2,8 @@
 
 Bonsai is a WordPress starter theme package that has been automated to include a generator (using [Yeoman](http://yeoman.io)). The generated themes is set up with Sass and [Gulp.js](http://gulpjs.com) for further automation.
 
+View [Bonsai](https://github.com/rdallaire/bonsai) for more information.
+
 ## Getting Started
 
 ### Install Yeoman
